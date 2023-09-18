@@ -14,8 +14,8 @@ class IntroPage extends StatelessWidget {
                 left: 80, right: 80, bottom: 40, top: 120),
             child: Image.asset('lib/images/banana.png'),
           ),
-          Padding(
-            padding: const EdgeInsets.all(24.0),
+          const Padding(
+            padding: EdgeInsets.all(24.0),
             child: Text(
               'We are the best at this business',
               textAlign: TextAlign.center,
@@ -25,15 +25,15 @@ class IntroPage extends StatelessWidget {
               ),
             ),
           ),
-          Text(
+          const Text(
             'fresh items everywhere',
           ),
-          Spacer(),
+          const Spacer(),
           GestureDetector(
             onTap: () => Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) {
-                return HomePage();
+                return const HomePage();
               }),
             ),
             child: Container(
@@ -41,8 +41,8 @@ class IntroPage extends StatelessWidget {
                 color: Colors.deepOrange,
                 borderRadius: BorderRadius.circular(15),
               ),
-              padding: EdgeInsets.all(24),
-              child: Text(
+              padding: const EdgeInsets.all(24),
+              child: const Text(
                 'Dive in',
                 style: TextStyle(
                   color: Colors.white,
@@ -50,7 +50,7 @@ class IntroPage extends StatelessWidget {
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

@@ -21,7 +21,7 @@ class GroceryItemTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           color: Color[100],
           borderRadius: BorderRadius.circular(12),

@@ -11,14 +11,14 @@ class CartPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: const IconThemeData(color: Colors.black),
         ),
         body: Consumer<CartModel>(builder: ((context, value, child) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
                   "My Cart",
                   style: TextStyle(
@@ -30,7 +30,7 @@ class CartPage extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   itemCount: value.cartItems.length,
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -47,7 +47,7 @@ class CartPage extends StatelessWidget {
                           title: Text(value.cartItems[index][0]),
                           subtitle: Text(value.cartItems[index][1]),
                           trailing: IconButton(
-                            icon: Icon(Icons.cancel),
+                            icon: const Icon(Icons.cancel),
                             onPressed: () =>
                                 Provider.of<CartModel>(context, listen: false)
                                     .removeItemFromCart(index),
@@ -65,14 +65,14 @@ class CartPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Colors.orange,
                       borderRadius: BorderRadius.circular(12)),
-                  padding: EdgeInsets.all(24),
+                  padding: const EdgeInsets.all(24),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'Total Price',
                             style: TextStyle(
                                 color: Colors.white,
@@ -86,8 +86,8 @@ class CartPage extends StatelessWidget {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(12)),
-                        padding: EdgeInsets.all(12),
-                        child: Row(
+                        padding: const EdgeInsets.all(12),
+                        child: const Row(
                           children: [
                             Text(
                               'Pay Now',

@@ -19,28 +19,28 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () =>
               Navigator.push(context, MaterialPageRoute(builder: ((context) {
-            return CartPage();
+            return const CartPage();
           }))),
           backgroundColor: Colors.orange,
-          child: Icon(Icons.shopping_bag),
+          child: const Icon(Icons.shopping_bag),
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 48,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
-                'Good Morning danDev,',
+                'Good Morning Ugodev,',
               ),
             ),
-            SizedBox(
-              height: 4,
+            const SizedBox(
+              height: 6,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
                 "let's order fresh items for you",
                 style: TextStyle(
@@ -49,18 +49,18 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
               child: Divider(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
+            const Padding(
+              padding: EdgeInsets.symmetric(
                 horizontal: 24,
               ),
               child: Text(
@@ -74,9 +74,10 @@ class _HomePageState extends State<HomePage> {
               child: Consumer<CartModel>(
                 builder: (context, value, child) {
                   return GridView.builder(
-                    padding: EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(12),
                     itemCount: value.shopItems.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       childAspectRatio: 1 / 1.3,
                     ),
